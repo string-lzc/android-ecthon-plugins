@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/LightActionbarMaster" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/supply" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
