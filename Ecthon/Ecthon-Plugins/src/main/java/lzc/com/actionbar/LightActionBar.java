@@ -29,11 +29,13 @@ public class LightActionBar {
     private TextView tvTitle;
     private int barColor = Color.WHITE;
     private FrameLayout frameLayout;
-    public static final int IMG_BACK_KEYBOARD = R.drawable.ic_action_back_keyboard;
-    public static final int IMG_BACK_ARROW = R.drawable.ic_action_back_arrow;
-    public static final int IMG_BACK_APPS = R.drawable.ic_action_apps;
-    public static final int IMG_BACK_SETTINGS = R.drawable.ic_action_settings;
-    public static final int IMG_BACK_EXIT = R.drawable.ic_action_exit;
+    public static final int IMG_APP_KEYBOARD = R.drawable.ic_action_back_keyboard;
+    public static final int IMG_APP_ARROW = R.drawable.ic_action_back_arrow;
+    public static final int IMG_APP_APPS = R.drawable.ic_action_apps;
+    public static final int IMG_APP_SETTINGS = R.drawable.ic_action_settings;
+    public static final int IMG_APP_EXIT = R.drawable.ic_action_exit;
+    public static final int IMG_APP_INFO = R.drawable.ic_action_info;
+    public static final int IMG_APP_ADD = R.drawable.ic_action_add;
     public static final boolean COLOR_BAR_TEXT_WHITE = false;
     public static final boolean COLOR_BAR_TEXT_DARK = true;
 
