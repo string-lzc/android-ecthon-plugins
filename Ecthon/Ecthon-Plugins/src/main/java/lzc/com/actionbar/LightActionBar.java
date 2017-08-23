@@ -1,24 +1,17 @@
-package lzc.com.lightactionbarmaster;
+package lzc.com.actionbar;
 
 
 import android.app.Activity;
-import android.app.job.JobInfo;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.telephony.CellIdentityCdma;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.githang.statusbar.StatusBarCompat;

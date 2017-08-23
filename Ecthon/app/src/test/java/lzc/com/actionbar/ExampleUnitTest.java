@@ -1,4 +1,4 @@
-package lzc.com.lightactionbarmaster;
+package lzc.com.actionbar;
 
 import org.junit.Test;
 

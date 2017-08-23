@@ -1,4 +1,4 @@
-package lzc.com.lightactionbarmaster;
+package lzc.com.actionbar;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("lzc.com.lightactionbarmaster", appContext.getPackageName());
+        assertEquals("lzc.com.ecthon", appContext.getPackageName());
     }
 }

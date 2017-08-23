@@ -3,10 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Ecthon.iml" filepath="$PROJECT_DIR$/Ecthon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LightActionbarMaster/LightActionbarMaster.iml" filepath="$PROJECT_DIR$/LightActionbarMaster/LightActionbarMaster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ecthon-Plugins/Ecthon-Plugins.iml" filepath="$PROJECT_DIR$/Ecthon-Plugins/Ecthon-Plugins.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/subsupply/subsupply.iml" filepath="$PROJECT_DIR$/subsupply/subsupply.iml" />
-      <module fileurl="file://$PROJECT_DIR$/supply/supply.iml" filepath="$PROJECT_DIR$/supply/supply.iml" />
     </modules>
   </component>
 </project>

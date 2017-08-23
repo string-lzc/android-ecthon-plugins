@@ -1,1 +1,1 @@
-include ':app', ':LightActionbarMaster', ':supply', ':subsupply'
+include ':app', ':Ecthon-Plugins'
