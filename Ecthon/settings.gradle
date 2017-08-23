@@ -1,1 +1,1 @@
-include ':app', ':LightActionbarMaster', ':supply'
+include ':app', ':LightActionbarMaster', ':supply', ':subsupply'
