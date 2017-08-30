@@ -195,8 +195,8 @@ public class LightActionBar {
         float[] hsv = new float[3];
         Color.colorToHSV(color, hsv); // convert to hsv
         // make darker
-        hsv[1] = hsv[1] + 0.1f; // more saturation
-        hsv[2] = hsv[2] - 0.1f; // less brightness
+       // hsv[1] = hsv[1] + 0.1f; // more saturation
+        hsv[2] = hsv[2] - 0.2f; // less brightness
         int darkerColor = Color.HSVToColor(hsv);
         return  darkerColor ;
     }
