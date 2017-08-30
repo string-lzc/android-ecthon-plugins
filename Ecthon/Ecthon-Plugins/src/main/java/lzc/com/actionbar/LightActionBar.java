@@ -1,26 +1,18 @@
-package lzc.com.lightactionbarmaster;
+package lzc.com.actionbar;
 
 
 import android.app.Activity;
-import android.app.job.JobInfo;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.telephony.CellIdentityCdma;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.TableRow;
 import android.widget.TextView;
-
 import com.githang.statusbar.StatusBarCompat;
 
 
@@ -36,11 +28,11 @@ public class LightActionBar {
     private TextView tvTitle;
     private int barColor = Color.WHITE;
     private FrameLayout frameLayout;
-    public static final int IMG_BACK_KEYBOARD = R.drawable.ic_action_back_keyboard;
-    public static final int IMG_BACK_ARROW = R.drawable.ic_action_back_arrow;
-    public static final int IMG_BACK_APPS = R.drawable.ic_action_apps;
-    public static final int IMG_BACK_SETTINGS = R.drawable.ic_action_settings;
-    public static final int IMG_BACK_EXIT = R.drawable.ic_action_exit;
+    public static final int IMG_APP_KEYBOARD = R.drawable.ic_action_back_keyboard;
+    public static final int IMG_APP_ARROW = R.drawable.ic_action_back_arrow;
+    public static final int IMG_APP_APPS = R.drawable.ic_action_apps;
+    public static final int IMG_APP_SETTINGS = R.drawable.ic_action_settings;
+    public static final int IMG_APP_EXIT = R.drawable.ic_action_exit;
     public static final boolean COLOR_BAR_TEXT_WHITE = false;
     public static final boolean COLOR_BAR_TEXT_DARK = true;
 
@@ -77,7 +69,7 @@ public class LightActionBar {
      */
     public LightActionBar setBarColor(int color,boolean barTextColor){
         this.barColor = color;
-        StatusBarCompat.setStatusBarColor((Activity) context,color,barTextColor);
+        StatusBarCompat.setStatusBarColor((Activity) context,getDarkerColor(color),barTextColor);
         return this;
     }
     /**
@@ -109,21 +101,21 @@ public class LightActionBar {
      */
     public LightActionBar setLeftTextView(int textColor,String text,View.OnClickListener viewOnclickListener){
 
-                TextView leftText = new TextView(context);
-                leftText.setGravity(Gravity.LEFT);
+        TextView leftText = new TextView(context);
+        leftText.setGravity(Gravity.LEFT);
 
-                leftText.setText(text);
-                leftText.setTextSize(20);
-                FrameLayout.LayoutParams params=new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT);
-                params.gravity=Gravity.LEFT|Gravity.CENTER;
-                if(textColor==DEFUALT_COLOR){
-                    leftText.setTextColor(Color.BLACK);
-                }else{
-                    leftText.setTextColor(textColor);
-                }
-                frameLayout.addView(leftText,params);
-                leftText.setOnClickListener(viewOnclickListener);
+        leftText.setText(text);
+        leftText.setTextSize(20);
+        FrameLayout.LayoutParams params=new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.gravity=Gravity.LEFT|Gravity.CENTER;
+        if(textColor==DEFUALT_COLOR){
+            leftText.setTextColor(Color.BLACK);
+        }else{
+            leftText.setTextColor(textColor);
+        }
+        frameLayout.addView(leftText,params);
+        leftText.setOnClickListener(viewOnclickListener);
         return this;
     }
     /**
@@ -192,6 +184,21 @@ public class LightActionBar {
         frameLayout.addView(imv,params);
         imv.setOnClickListener(onClickListener);
         return this;
+    }
+
+    /**
+     * 颜色加深算法
+     * @param color
+     * @return
+     */
+    public int getDarkerColor(int color){
+        float[] hsv = new float[3];
+        Color.colorToHSV(color, hsv); // convert to hsv
+        // make darker
+        hsv[1] = hsv[1] + 0.1f; // more saturation
+        hsv[2] = hsv[2] - 0.1f; // less brightness
+        int darkerColor = Color.HSVToColor(hsv);
+        return  darkerColor ;
     }
     /**
      * 构建
