@@ -13,12 +13,21 @@ public class DateHelper {
     private static Date date;
     private static SimpleDateFormat sdf;
 
-
+    /**
+     * 带参格式化日期
+     * @param formate 格式
+     * @return
+     */
     public static String formateDate(String formate){
         date = new Date();
         sdf = new SimpleDateFormat(formate);
         return sdf.format(date);
     }
+
+    /**
+     * 默认格式化时期，默认形式："yyyy-MM-dd"
+     * @return
+     */
     public static String defaultFormateDate(){
         date = new Date();
         sdf = new SimpleDateFormat("yyyy-MM-dd");
