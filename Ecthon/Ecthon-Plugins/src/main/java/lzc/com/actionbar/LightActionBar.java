@@ -32,21 +32,24 @@ public class LightActionBar {
     public static final int IMG_APP_ARROW = R.drawable.ic_action_back_arrow;
     public static final int IMG_APP_APPS = R.drawable.ic_action_apps;
     public static final int IMG_APP_SETTINGS = R.drawable.ic_action_settings;
+    public static final int IMG_APP_INFO = R.drawable.ic_action_info;
     public static final int IMG_APP_EXIT = R.drawable.ic_action_exit;
+    public static final int IMG_APP_HELP = R.drawable.ic_action_help;
     public static final boolean COLOR_BAR_TEXT_WHITE = false;
     public static final boolean COLOR_BAR_TEXT_DARK = true;
 
 
 
-    public LightActionBar(Context context){
-        this.context = context;
-        this.actionBar = ((AppCompatActivity)context).getSupportActionBar();
+    public LightActionBar(){
+        super();
     }
     /**
      * 构造器
      * @return
      */
-    public LightActionBar builder(){
+    public LightActionBar builder(Context context){
+        this.context = context;
+        this.actionBar = ((AppCompatActivity)context).getSupportActionBar();
         actionBar.setDisplayShowCustomEnabled(true);
         actionBar.setCustomView(R.layout.light_action_bar);
         frameLayout = (FrameLayout)actionBar.getCustomView().findViewById(R.id.flRoot);
@@ -84,7 +87,7 @@ public class LightActionBar {
     /**
      * 设置默认参数
      */
-    public void setParams(){
+    private void setParams(){
         title = context.getString(R.string.STRING_DEFAULT_TITLE);
         ColorDrawable drawable = new ColorDrawable(barColor);
         actionBar.setBackgroundDrawable(drawable);
@@ -191,7 +194,7 @@ public class LightActionBar {
      * @param color
      * @return
      */
-    public int getDarkerColor(int color){
+    private int getDarkerColor(int color){
         float[] hsv = new float[3];
         Color.colorToHSV(color, hsv); // convert to hsv
         // make darker
