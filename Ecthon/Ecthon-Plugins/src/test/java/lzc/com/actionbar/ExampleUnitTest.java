@@ -2,6 +2,8 @@ package lzc.com.actionbar;
 
 import org.junit.Test;
 
+import lzc.com.java.DecimalHelper;
+
 import static org.junit.Assert.*;
 
 /**
@@ -12,6 +14,7 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+       // System.out.println(DecimalHelper.doubleReserve(3.1415926535,4));
+        System.out.println(DecimalHelper.floatKeep(3.1415926535,4));
     }
 }

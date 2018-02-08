@@ -1,4 +1,4 @@
-package lzc.com.datehelper;
+package lzc.com.java;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -21,6 +21,7 @@ public class DateHelper {
     public static String formateDate(String formate){
         date = new Date();
         sdf = new SimpleDateFormat(formate);
+
         return sdf.format(date);
     }
 
@@ -40,7 +41,6 @@ public class DateHelper {
      * @return 相差天数
      * @throws ParseException
      */
-
     public static int daysBetween(String smdate,String bdate) throws ParseException {
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
         Calendar cal = Calendar.getInstance();
@@ -49,7 +49,6 @@ public class DateHelper {
         cal.setTime(sdf.parse(bdate));
         long time2 = cal.getTimeInMillis();
         long between_days=(time2-time1)/(1000*3600*24);
-
         return Integer.parseInt(String.valueOf(between_days));
     }
 

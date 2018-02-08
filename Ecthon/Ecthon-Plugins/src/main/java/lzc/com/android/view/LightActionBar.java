@@ -1,4 +1,4 @@
-package lzc.com.actionbar;
+package lzc.com.android.view;
 
 
 import android.app.Activity;
@@ -13,7 +13,10 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.githang.statusbar.StatusBarCompat;
+
+import lzc.com.actionbar.R;
 
 
 /**
@@ -70,7 +73,7 @@ public class LightActionBar {
      * @param color
      * @return
      */
-    public LightActionBar setBarColor(int color,boolean barTextColor){
+    public LightActionBar setBarColor(int color, boolean barTextColor){
         this.barColor = color;
         StatusBarCompat.setStatusBarColor((Activity) context,getDarkerColor(color),barTextColor);
         return this;
@@ -102,7 +105,7 @@ public class LightActionBar {
      * @param viewOnclickListener
      * @return
      */
-    public LightActionBar setLeftTextView(int textColor,String text,View.OnClickListener viewOnclickListener){
+    public LightActionBar setLeftTextView(int textColor, String text, View.OnClickListener viewOnclickListener){
 
         TextView leftText = new TextView(context);
         leftText.setGravity(Gravity.LEFT);
@@ -128,7 +131,7 @@ public class LightActionBar {
      * @param viewOnclickListener
      * @return
      */
-    public LightActionBar setRightTextView(int textColor,String text,View.OnClickListener viewOnclickListener){
+    public LightActionBar setRightTextView(int textColor, String text, View.OnClickListener viewOnclickListener){
         TextView leftText = new TextView(context);
         leftText.setGravity(Gravity.RIGHT|Gravity.CENTER);
         leftText.setText(text);
