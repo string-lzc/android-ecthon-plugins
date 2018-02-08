@@ -2,10 +2,7 @@ package lzc.com.actionbar;
 
 import org.junit.Test;
 
-import lzc.com.android.view.IOSActionSheetDialog;
 import lzc.com.java.DecimalHelper;
-
-import static org.junit.Assert.*;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
